@@ -35,10 +35,10 @@ class Player:
 
     def __init__(self, gdata):
         self.gdata = gdata
-        self.avel = 5
-        self.reload_time = 1000
-        self.health = 100
-        self.max_health = 100
+        self.avel = 50
+        self.reload_time = 100
+        self.health = 150
+        self.max_health = 150
         self.money = 0
 
         self.spread_shot = False

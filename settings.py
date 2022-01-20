@@ -1,7 +1,7 @@
 import pygame as pg
 
-WIN_TITLE = "The Last Stand"
-WIN_SIZE = 1280, 880
+WIN_TITLE = "THE LAST STAND"
+WIN_SIZE = 1080, 720
 WIN_CENTER = WIN_SIZE[0] // 2, WIN_SIZE[1] // 2
 
 # Colors ----------------------------------------------------------------------------

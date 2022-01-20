@@ -24,7 +24,7 @@ class GameState:
         gdata.shop = None
         Bullet.piercing = False
 
-        self.shop_prompt = gdata.fonts["tiny"].render("Press Space to open Shop",\
+        self.shop_prompt = gdata.fonts["small"].render("Press Space to open Shop",\
             True, settings.WHITE)
         self.shop_ptl = (settings.WIN_CENTER[0] - self.shop_prompt.get_width() // 2,\
             settings.WIN_SIZE[1] - self.shop_prompt.get_height() - 20)
