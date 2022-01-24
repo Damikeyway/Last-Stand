@@ -145,7 +145,7 @@ class ObjectManager:
 
 class Bullet:
 
-    def __init__(self, gdata, pos, ang, rad=10, dmg=50, vel=0.5):
+    def __init__(self, gdata, pos, ang, rad=10, dmg=50, vel=3):
         self.gdata = gdata
         self.x, self.y = pos[0], pos[1]
         self.vx, self.vy = m.cos(m.radians(ang)) * vel, -m.sin(m.radians(ang)) * vel
@@ -201,8 +201,8 @@ class ShockwaveBullet:
 
 
 class Enemy:
-    
-    def __init__(self, gdata, pos, ang, rad=30, dmg=25, vel=5):
+
+    def __init__(self, gdata, pos, ang, rad=35, dmg=25, vel=5):
         self.gdata = gdata
         self.x, self.y = pos[0], pos[1]
         self.vx, self.vy = -m.cos(m.radians(ang)) * vel, -m.sin(m.radians(ang)) * vel
@@ -210,13 +210,15 @@ class Enemy:
         self.damage = dmg
         self.health = 50
         self.worth = 25
+
+
         
     def update(self, dt):
         self.x += self.vx
         self.y += self.vy
 
     def draw(self, screen):
-        pg.draw.circle(screen, settings.RED, (int(self.x), int(self.y)), \
+        pg.draw.circle(screen, settings.LIGHT_ORANGE, (int(self.x), int(self.y)), \
             self.radius)
     
     def take_damage(self, dmg):
@@ -259,5 +261,5 @@ class EnemyGenerator:
         x += settings.WIN_SIZE[0] // 2
         y += settings.WIN_SIZE[1] // 2
         self.gdata.enemies.add(Enemy(self.gdata, (x, y), ang))
-        self.spawn_count += 1
+        self.spawn_count += 2
 
