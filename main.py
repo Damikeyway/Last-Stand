@@ -11,11 +11,12 @@ import ui
 # initialization --------------------------------------------------------------------
 pg.init()
 
+my_font = "futura bold"
 gdata = lambda: None
 gdata.fonts = dict()
-gdata.fonts["Large"] = pg.font.SysFont("futura bold", 42)
-gdata.fonts["small"] = pg.font.SysFont("futura bold", 32)
-gdata.fonts["tiny"] = pg.font.SysFont("futura bold", 12)
+gdata.fonts["Large"] = pg.font.SysFont(my_font, 42)
+gdata.fonts["small"] = pg.font.SysFont(my_font, 32)
+gdata.fonts["tiny"] = pg.font.SysFont(my_font, 12)
 gdata.mmanager = MouseManager()
 gdata.player = None #Player(gdata)
 gdata.bullets = None #[]

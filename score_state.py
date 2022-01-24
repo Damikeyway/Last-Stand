@@ -16,9 +16,10 @@ class ScoreState:
 
         self.item_height = (settings.WIN_SIZE[1] - 200) // 10
 
-        self.time_text = self.gdata.fonts["Large"].render("Time", True, settings.WHITE)
-        self.date_text = self.gdata.fonts["Large"].render("Date", True, settings.WHITE)
-        self.score_text = self.gdata.fonts["Large"].render("Score", True, settings.WHITE)
+        my_size = "Large"
+        self.time_text = self.gdata.fonts[my_size].render("Time", True, settings.WHITE)
+        self.date_text = self.gdata.fonts[my_size].render("Date", True, settings.WHITE)
+        self.score_text = self.gdata.fonts[my_size].render("Score", True, settings.WHITE)
 
         self.time_tl = settings.WIN_SIZE[0] - btn_size[0] - 40 - self.time_text.get_width(), 20
         self.date_tl = settings.WIN_CENTER[0] - self.date_text.get_width() // 2, 20

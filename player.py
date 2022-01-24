@@ -261,5 +261,5 @@ class EnemyGenerator:
         x += settings.WIN_SIZE[0] // 2
         y += settings.WIN_SIZE[1] // 2
         self.gdata.enemies.add(Enemy(self.gdata, (x, y), ang))
-        self.spawn_count += 2
+        self.spawn_count += 1.5
 
